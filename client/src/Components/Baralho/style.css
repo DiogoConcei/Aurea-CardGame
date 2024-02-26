@@ -1,0 +1,92 @@
+.UserContent {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-flow: row wrap;
+    gap: 30px;
+    background: #472f2e;
+}
+
+.ViewContent {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-flow: column;
+    height: 95vh;
+    width: 65vw;
+}
+
+.MainBtns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px;
+    width: 65vw;
+    border: 2px solid #ffdd43;
+    outline: 2px solid #000;
+    border-radius: 10px 10px 15px 15px;
+}
+
+.MainBtns li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.MainBtns button {
+    color: white;
+    border-radius: 1rem;
+    font-size: 1.3rem;
+    padding: 10px;
+    background: #422a1e;
+    box-shadow: 0 0.4rem #ffdd43;
+}
+
+.MainBtns button:active {
+    color: white;
+    box-shadow: 0 0.2rem #ffdd43;
+    transform: translateY(0.2rem);
+}
+
+.MainBtns button:hover {
+    background-color: rgba(255, 255, 255, 0.128);
+    backdrop-filter: blur(20px);
+    border-radius: 15px;
+    outline: none;
+    cursor: url("/public/images/imagens_tela/use157.cur"), auto;
+}
+
+.BoxBuscaOtimizada {
+    width: 100px;
+    height: 70px;
+}
+
+.BuscaOtimizada{
+    width: 50px;
+    height: 50px;
+}  
+
+.BoxCriacoesPessoais {
+    width: 175px;
+    height: 70px;
+}
+
+.BuscaPorClasse {
+    width: 175px;
+    height: 70px;
+}
+
+.BoxBuscaGeral {
+    width: 75px;
+    height: 70px;
+}
+
+.BuscaGeral {
+    height: 50px;
+    width: 25px;
+}
+
+.BoxCriarBaralho {
+    height: 70px;
+}
