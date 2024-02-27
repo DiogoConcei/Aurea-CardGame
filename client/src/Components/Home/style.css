@@ -3,12 +3,9 @@
 * {
     padding: 0;
     margin: 0;
-    font-size: 12px;
-    outline: none;
+    font-size: 16px;
     box-sizing: border-box;
     font-family: "Protest Riot", sans-serif;
-    text-decoration: none;
-    list-style: none;
 }
 
 .TelaPrincipal {
@@ -18,100 +15,92 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    color: white;
-}
-
-body {
     cursor: url("/public/images/imagens_tela/use157.cur"), auto;
 }
 
 .Menu {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-around;
     flex-flow: column;
-    padding: 20px;
-    gap: 4em;
     height: 100vh;
-    width: 20vw;
+    width: 15vw;
     background-color: rgba(0, 0, 0, 0.563);
     border-radius: 20px;
+    padding: 20px;
 }
 
 .logo {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 300px;
+    width: 15vw;
+    height: 20vh;
+    padding: 20px;
 }
 
-.Menu img {
-    width: 200px;
-    height: 200px;
+.logo img {
+    width: 25vw;
+    height: 25vh;    
 }
 
 .opcoes {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    flex-flow: column wrap;
-    list-style: none;
-    width: 300px;
+    justify-content: space-evenly;
+    flex-flow: column ;
+    height: 50vh;
+    width: 14vw;
 }
 
 .opcoes li {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    width: 15vw;
 }
 
 .MenuLink {
-    font-size: 32px;
     color: white;
-    text-align: center;
-    padding: 20px;
+    text-decoration: none;
+    font-size: 2rem;
     cursor: url("/public/images/imagens_tela/use157.cur"), auto;
-} 
+}
 
 .MenuLink:hover {
-    border: 2px solid #cccccc86;
+    border: 2px solid #ccc;
+    border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.128);
     backdrop-filter: blur(20px);
-    width: 15vw;
-    border-radius: 15px;
-    cursor: pointer;
+    width: 12vw;
     cursor: url("/public/images/imagens_tela/use157.cur"), auto;
-} 
-
-
+}
 
 .config ul {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    list-style: none;
-    width: 15vw;
+    justify-content: center;
+    width: 10vw;
 }
 
 .config li {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 8vw;
+    width: 10vw;
 }
 
 .config li:hover {
     border: 2px solid #cccccc86;
+    border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.128);
     backdrop-filter: blur(20px);
-    border-radius: 15px;
-    width: 8vw;
-    cursor: pointer;
+    width: 10vw;
     cursor: url("/public/images/imagens_tela/use157.cur"), auto;
-} 
-
-.config img {
-    width: 50px;
-    height: 50px;
 }
 
+.config img {
+    width: 2.5rem;
+    height: 2.5rem;
+}
