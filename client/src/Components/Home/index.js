@@ -1,25 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
 
 const Home = () => {
-  const [audioStarted, setAudioStarted] = useState(false);
-
-  useEffect(() => {
-    const handleUserInteraction = () => {
-      if (!audioStarted) {
-        const audio = document.getElementById("audio");
-        audio.play();
-        setAudioStarted(true);
-      }
-    };
-
-    document.addEventListener("click", handleUserInteraction);
-
-    return () => {
-      document.removeEventListener("click", handleUserInteraction);
-    };
-  }, [audioStarted]);
 
   return (
     <main className="TelaPrincipal">
