@@ -3,13 +3,13 @@
     align-items: center;
     justify-content: flex-start;
     flex-flow: row wrap;
-    gap: 30px;
+    gap: 50px;
     background: #472f2e;
 }
 
 .ViewContent {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-start;
     flex-flow: column;
     height: 95vh;

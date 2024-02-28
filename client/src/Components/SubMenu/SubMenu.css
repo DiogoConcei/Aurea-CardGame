@@ -1,0 +1,44 @@
+.SubMenuBaralho{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-flow: column wrap;
+    height: 100vh;
+    padding: 20px;
+    gap: 30px;
+    list-style: none;
+    box-shadow: -15px 0px 17px 0px rgba(0,0,0,0.75);
+    border: 5px solid #422a1e;
+    border-right: none;
+    border-top: none;    
+}
+
+.SubMenuBaralho button {
+    font-size: 1.3rem;
+    color: white;
+    width: 12em;
+    background: #422a1e;
+    box-shadow: 0 0.4rem #FFDD43;
+    border-radius: 10px;
+    padding: 1rem;
+    cursor: url("/public/images/imagens_tela/use157.cur"), auto;
+}
+
+button.active {
+    color: white;
+    box-shadow: 0 0.2rem #FFDD43;
+    transform: translate(0.2rem);
+}
+
+.SubMenuBaralho button:hover {
+    background-color: rgba(255, 255, 255, 0.128);
+    backdrop-filter: blur(2rem);
+    border-radius: 15px;
+}
+
+.options_view {
+    height: 95vh;
+    width: 5vw;
+    border-left: 2px solid #FFDD43;
+    border-radius: 10px;
+}

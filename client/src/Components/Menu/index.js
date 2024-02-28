@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
+import SubmenuAtual from "../SubMenu";
 import "./MenuStyle.css";
 
 const Menu = () => {
@@ -36,6 +37,7 @@ const Menu = () => {
           </li>
         </ul>
       </section>
+      <SubmenuAtual />
     </article>
   );
 };
