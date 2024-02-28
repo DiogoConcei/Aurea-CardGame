@@ -3,7 +3,8 @@ import React from "react";
 import { TbAdjustmentsCog } from "react-icons/tb";
 import { VscSearch } from "react-icons/vsc";
 import { IoCreateOutline } from "react-icons/io5";
-import "./style.css";
+import Menu from "../Menu";
+import "./BaralhoStyle.css";
 
 const Baralhos = () => {
 
@@ -11,7 +12,7 @@ const Baralhos = () => {
 
   return (
     <main className="UserContent">
-      {/* <MenuGame /> */}
+      <Menu />
       <section className="ViewContent">
         <ul className="MainBtns">
           <li>

@@ -1,0 +1,52 @@
+.MenuAlternativo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 15vw;
+    border: 4px solid #ffdd43;
+    border-bottom: none;
+    border-top: none;
+    text-align: center;
+}
+
+.MenuAlternativos_Options {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-flow: column wrap;
+    height: 100vh;
+    width: 15vw;
+    padding: 20px;
+    background: #473936;
+    border-radius: 5px;
+    list-style: none;
+}
+
+.MenuAlternativo li img {
+    width: 7rem;
+    height: 7rem;
+}
+
+.MenuAlternativo li p {
+    border-bottom: 1px solid #ffdd43;
+    width: 7vw;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.MenuLinkGeral {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column wrap;
+    gap: 20px;
+    width: 10vw;
+    text-decoration: none;
+    cursor: url("/public/images/imagens_tela/use157.cur"), auto;
+}
+
+.active  {
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0px 0px 95px 3px rgba(255,213,0,0.55);
+}
