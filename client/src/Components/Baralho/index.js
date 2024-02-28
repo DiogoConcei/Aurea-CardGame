@@ -14,7 +14,7 @@ const Baralhos = () => {
     <main className="UserContent">
       <Menu />
       <section className="ViewContent">
-        <ul className="MainBtns">
+        <ul className="OptionsBTNS">
           <li>
             <button className="BoxBuscaOtimizada">
               <TbAdjustmentsCog className="BuscaOtimizada" />

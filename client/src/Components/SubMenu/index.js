@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
 import "./SubMenu.css";
 
-const SubmenuAtual = ({onDadosChange}) => {
+const SubmenuAtual = ({ onDadosChange }) => {
   const rota = useLocation();
 
   const ControlerSubmenus = {
     "/Baralhos": <SubmenuBaralho onDadosChange={onDadosChange} />,
-    "/Baralhos/Cartas": <SubmenuBaralho onDadosChange={onDadosChange}  />,
+    "/Baralhos/Cartas": <SubmenuBaralho onDadosChange={onDadosChange} />,
   };
 
   const Submenu = () => {
@@ -16,7 +16,6 @@ const SubmenuAtual = ({onDadosChange}) => {
 
   return <Submenu />;
 };
-
 
 const SubmenuBaralho = () => {
   const [activeButton, setActiveButton] = useState("Todos os baralhos");
@@ -58,6 +57,15 @@ const SubmenuBaralho = () => {
             className={activeButton === "Baralhos Pré-montados" ? "active" : ""}
           >
             Baralhos Pré-montados
+          </button>
+        </li>
+
+        <li>
+          <button
+            onClick={() => handleClick("Baralhos Pré-montados")}
+            className={activeButton === "Baralhos Pré-montados" ? "active" : ""}
+          >
+            Cartas
           </button>
         </li>
         <div className="options_view"></div>
