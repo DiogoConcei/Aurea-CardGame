@@ -1,5 +1,4 @@
 import React from "react";
-// import MenuGame from "../MenuGame";
 import { TbAdjustmentsCog } from "react-icons/tb";
 import { VscSearch } from "react-icons/vsc";
 import { IoCreateOutline } from "react-icons/io5";
