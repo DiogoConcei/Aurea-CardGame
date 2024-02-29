@@ -6,7 +6,6 @@ import "./MenuStyle.css";
 const Menu = () => {
   const rota = useLocation();
 
-
   return (
     <article className="ViewMenu">
       <section className="MenuAlternativo">
@@ -37,7 +36,7 @@ const Menu = () => {
           </li>
         </ul>
       </section>
-      <SubmenuAtual />
+        <SubmenuAtual />
     </article>
   );
 };

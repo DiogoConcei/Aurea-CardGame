@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
 import "./SubMenu.css";
 
-const SubmenuAtual = ({ onDadosChange }) => {
+const SubmenuAtual = () => {
   const rota = useLocation();
 
   const ControlerSubmenus = {
-    "/Baralhos": <SubmenuBaralho onDadosChange={onDadosChange} />,
-    "/Baralhos/Cartas": <SubmenuBaralho onDadosChange={onDadosChange} />,
+    "/Baralhos": <SubmenuBaralho />,
+    "/Baralhos/Cartas": <SubmenuBaralho />,
   };
 
   const Submenu = () => {
@@ -18,7 +18,7 @@ const SubmenuAtual = ({ onDadosChange }) => {
 };
 
 const SubmenuBaralho = () => {
-  const [activeButton, setActiveButton] = useState("Todos os baralhos");
+  const [activeButton,   setActiveButton] = useState("Todos os baralhos");
 
   const handleClick = (buttonName) => {
     setActiveButton(buttonName);
@@ -62,8 +62,8 @@ const SubmenuBaralho = () => {
 
         <li>
           <button
-            onClick={() => handleClick("Baralhos Pré-montados")}
-            className={activeButton === "Baralhos Pré-montados" ? "active" : ""}
+            onClick={() => handleClick("Cartas")}
+            className={activeButton === "Cartas" ? "active" : ""}
           >
             Cartas
           </button>
