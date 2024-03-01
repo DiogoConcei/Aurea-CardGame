@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./Components/Home";
-import Baralho from "./Components/Baralho";
+import Home from "./Pages/Home/index.js";
+import Baralho from "./Pages/Baralho/index.js";
 
 function App() {
   return (

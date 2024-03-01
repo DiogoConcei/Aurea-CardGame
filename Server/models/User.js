@@ -1,9 +1,9 @@
-const con = require('../config/database.js')
+const conexao = require('../config/database')
 const { Sequelize, DataTypes } = require('sequelize');
-const sequelize = new Sequelize(con);
+const sequelize = new Sequelize(conexao);
 
 const User = sequelize.define('User', {
-    Name: {
+    Nome: {
         type: DataTypes.STRING,
         allowNull: false,
         unique: true,
@@ -17,12 +17,22 @@ const User = sequelize.define('User', {
         type: DataTypes.STRING,
         allowNull: false,
     },
-    ID: {
+    IsEmailConfirmed: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false,
+    },
+    CridadoEm: {
+
+    },
+    AtualizadoEm: {
+
+    },
+    Id: {
         type: DataTypes.INTEGER,
         allowNull: false,
         primaryKey: true,
         autoIncrement: true
-    }
-}, {
-    
+    },
 });
+
+module.exports = User;

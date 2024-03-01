@@ -26,7 +26,7 @@
 
 button.active {
     color: white;
-    box-shadow: 0 0.2rem #FFDD43;
+    box-shadow: 0 0.1rem #FFDD43;
     transform: translate(0.2rem);
 }
 

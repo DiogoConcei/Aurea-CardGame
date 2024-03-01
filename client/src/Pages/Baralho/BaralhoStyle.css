@@ -38,11 +38,12 @@
     box-shadow: 0 0.4rem #ffdd43;
 }
 
-.OptionsBTNS button:active {
+button.active {
     color: white;
-    box-shadow: 0 0.2rem #ffdd43;
-    transform: translateY(0.2rem);
+    box-shadow: 0 0.1rem #FFDD43;
+    transform: translate(0.2rem);
 }
+
 
 .OptionsBTNS button:hover {
     background-color: rgba(255, 255, 255, 0.128);

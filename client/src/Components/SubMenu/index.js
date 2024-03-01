@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { useLocation } from "react-router-dom";
-import "./SubMenu.css";
+import { useSelector, useDispatch } from "react-redux";
+import { updateActiveButton } from '../../store/actions'; 
+import './SubMenu.css'
 
 const SubmenuAtual = () => {
   const rota = useLocation();
@@ -18,11 +20,12 @@ const SubmenuAtual = () => {
 };
 
 const SubmenuBaralho = () => {
-  const [activeButton,   setActiveButton] = useState("Todos os baralhos");
+  const activeButton = useSelector(state => state.submenu.activeButton)
+  const dispatch = useDispatch();
 
   const handleClick = (buttonName) => {
-    setActiveButton(buttonName);
-  };
+    dispatch(updateActiveButton(buttonName))
+  }
 
   return (
     <div>
