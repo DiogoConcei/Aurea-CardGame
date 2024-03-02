@@ -1,42 +1,7 @@
-import { createStore, combineReducers } from "redux";
+import { createStore, applyMiddleware } from "redux";
+import {thunk} from 'redux-thunk';
+import rootReducer from './reducers';
 
-const initial_submenu_state = {
-  activeButton: "Todos os baralhos",
-};
-
-const initial_baralho_state = {
-  actionConfigButton: "",
-};
-
-const submenuReducer = (state = initial_submenu_state, action) => {
-  switch (action.type) {
-    case "UPDATE_ACTIVE_BUTTON_SUBMENU":
-      return {
-        ...state,
-        activeButton: action.payload,
-      };
-    default:
-      return state;
-  }
-};
-
-const baralhosReducer = (state = initial_baralho_state, action) => {
-  switch (action.type) {
-    case "UPDATE_ACTION_CONFIG_BUTTON":
-      return {
-        ...state,
-        actionConfigButton: action.payload,
-      };
-    default:
-      return state;
-  }
-};
-
-const rootReducer = combineReducers({
-  submenu: submenuReducer,
-  baralhos: baralhosReducer,
-});
-
-const store = createStore(rootReducer);
+const store = createStore(rootReducer, applyMiddleware(thunk));
 
 export default store;

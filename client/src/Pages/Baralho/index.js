@@ -1,5 +1,5 @@
 // base react
-import React, { useState } from "react";
+import React from "react";
 import Menu from "../../Components/Menu/index.js";
 import "./BaralhoStyle.css";
 // base react
@@ -11,19 +11,23 @@ import { IoCreateOutline } from "react-icons/io5";
 // icons
 
 // redux
-import { useSelector, useDispatch } from "react-redux";
-import { updateActionConfigButton } from "../../store/actions"; // Importe a ação correta//redux
+import { useDispatch, useSelector } from "react-redux";
+import { updateActionConfigButton } from "../../store/actions";
+import { updateActionConfigButtonThunk } from "../../store/middleware/BaralhoThunks.js";
 // redux
 
 const Baralhos = () => {
-  const [activeButton, setActiveButton] = useState("");
-
-  const actionConfigButton = useSelector((state) => state.submenu.activeButton);
+  const actionConfigButton = useSelector(
+    (state) => state.baralhos.actionConfigButton
+  );
   const dispatch = useDispatch();
 
+ //const activeButtonSb = useSelector((state) => state.submenu.activeButton);
+
+
   const handleClick = (buttonName) => {
-    setActiveButton(buttonName);
-    dispatch(updateActionConfigButton(buttonName)); // Dispatch da ação correta
+    dispatch(updateActionConfigButton(buttonName));
+    dispatch(updateActionConfigButtonThunk(buttonName));
   };
 
   return (
@@ -34,7 +38,7 @@ const Baralhos = () => {
           <li>
             <button
               className={`BoxBuscaOtimizada ${
-                activeButton === "Busca Otimizada" ? "active" : ""
+                actionConfigButton === "Busca Otimizada" ? "active" : ""
               }`}
               onClick={() => handleClick("Busca Otimizada")}
             >
@@ -44,7 +48,7 @@ const Baralhos = () => {
           <li>
             <button
               className={`BoxCriacoesPessoais ${
-                activeButton === "Criacoes Pessoais" ? "active" : ""
+                actionConfigButton === "Criacoes Pessoais" ? "active" : ""
               }`}
               onClick={() => handleClick("Criacoes Pessoais")}
             >
@@ -54,7 +58,7 @@ const Baralhos = () => {
           <li>
             <button
               className={`BuscaPorClasse ${
-                activeButton === "Busca Por Classe" ? "active" : ""
+                actionConfigButton === "Busca Por Classe" ? "active" : ""
               }`}
               onClick={() => handleClick("Busca Por Classe")}
             >
@@ -64,7 +68,7 @@ const Baralhos = () => {
           <li>
             <button
               className={`BoxBuscaGeral ${
-                activeButton === "Busca Geral" ? "active" : ""
+                actionConfigButton === "Busca Geral" ? "active" : ""
               }`}
               onClick={() => handleClick("Busca Geral")}
             >
@@ -74,7 +78,7 @@ const Baralhos = () => {
           <li>
             <button
               className={`BoxCriarBaralho ${
-                activeButton === "Criar Baralho" ? "active" : ""
+                actionConfigButton === "Criar Baralho" ? "active" : ""
               }`}
               onClick={() => handleClick("Criar Baralho")}
             >
