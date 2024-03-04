@@ -10,8 +10,9 @@
 .ViewContent {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     flex-flow: column wrap;
+    gap: 20px;
     height: 95vh;
     width: 66vw;
 }

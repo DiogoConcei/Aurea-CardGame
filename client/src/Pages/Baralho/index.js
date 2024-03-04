@@ -1,6 +1,7 @@
 // base react
 import React from "react";
 import Menu from "../../Components/Menu/index.js";
+import Form from "../../Components/Form/index.js"
 import "./BaralhoStyle.css";
 // base react
 
@@ -13,22 +14,30 @@ import { IoCreateOutline } from "react-icons/io5";
 // redux
 import { useDispatch, useSelector } from "react-redux";
 import { updateActionConfigButton } from "../../store/actions";
-import { updateActionConfigButtonThunk } from "../../store/middleware/BaralhoThunks.js";
 // redux
 
 const Baralhos = () => {
+
   const actionConfigButton = useSelector(
     (state) => state.baralhos.actionConfigButton
   );
   const dispatch = useDispatch();
 
- //const activeButtonSb = useSelector((state) => state.submenu.activeButton);
-
 
   const handleClick = (buttonName) => {
     dispatch(updateActionConfigButton(buttonName));
-    dispatch(updateActionConfigButtonThunk(buttonName));
+    console.log(buttonName)
   };
+
+
+  const ComponentDinamico = () => {
+    switch (actionConfigButton) {
+      case 'Criar Baralho':
+        return <Form />;
+      default:
+        return null;
+    }
+  }
 
   return (
     <section className="UserContent">
@@ -86,6 +95,9 @@ const Baralhos = () => {
             </button>
           </li>
         </ul>
+        <section className="exibContent">
+              {ComponentDinamico()}
+        </section>
       </section>
     </section>
   );
