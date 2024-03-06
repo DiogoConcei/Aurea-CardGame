@@ -1,7 +1,10 @@
-.Forma {
+.CreateDeck {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
+    flex-flow: row wrap;
+    gap: 30px;
+    padding: 30px;
     height: 80vh;
 }
 
@@ -9,36 +12,94 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 20px;
-    gap: 20px;
-    flex-flow: column;
+    flex-flow: column wrap;
     text-align: center;
     background-color: #473936;
     border-radius: 0.5rem;
     border: 1px solid #ffdd43;
-    width: 300px;
-    height: 450px;
+    width: 400px;
+    height: 550px;
 }
 
 .BackDeck p {
-    width: 300px;
     color: white;
+    font-weight: lighter;
+    font-size: 24px;
     padding: 0.5rem;
 }
 
 .BackDeck h1 {
     color: white;
+    padding: 0.5rem;
     font-size: 24px;
 }
 
 .BackDeck img {
-    width: 200px;
-    height: 250px;
+    width: 250px;
+    height: 300px;
 }
 
 .FormPost {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items:  center;
+    justify-content: space-between;
     flex-flow: column;
+    gap: 20px;
+    height: 550px;
 }
+
+
+.FormPost input[type="text"], .novaImagem {
+    width: 300px;
+    background: #473936;
+    border: 2px solid #ffdd43;
+    border-radius: 10px;
+    outline: none;
+    text-align: center;
+    font-size: 24px;
+    color: white;
+    padding: 10px;
+}
+
+
+.novaImagem:hover {
+    background-color: rgba(255, 255, 255, 0.128);
+    backdrop-filter: blur(2rem);
+    cursor: url("/public/images/imagens_tela/use157.cur"), auto;
+}
+
+.FormPost input[type="text"]::placeholder, .FormPost textarea::placeholder {
+    color: #ffff;
+    font-size: 24px;
+}
+
+.FormPost textarea {
+    width: 300px;
+    height: 300px;
+    border-radius: 0.5rem;
+    background: #473936;
+    border: 2px solid #ffdd43;
+    outline: none;
+    color: white;
+    padding: 20px;
+    font-size: 24px;
+    text-align: center;
+    resize: none;
+}
+
+
+.input-file {
+    display: none;
+}
+
+.FormSubmit {
+    width: 300px;
+    border-radius: 0.5rem;
+    background: #473936;
+    border: 2px solid #ffdd43;
+    outline: none;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    cursor: url("/public/images/imagens_tela/use157.cur"), auto;
+} 

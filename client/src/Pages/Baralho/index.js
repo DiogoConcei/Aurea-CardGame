@@ -1,7 +1,7 @@
 // base react
 import React from "react";
 import Menu from "../../Components/Menu/index.js";
-import Form from "../../Components/Form/index.js"
+import CriaBaralho from "../../Components/Form/index.js"
 import "./BaralhoStyle.css";
 // base react
 
@@ -33,7 +33,7 @@ const Baralhos = () => {
   const ComponentDinamico = () => {
     switch (actionConfigButton) {
       case 'Criar Baralho':
-        return <Form />;
+        return <CriaBaralho />;
       default:
         return null;
     }

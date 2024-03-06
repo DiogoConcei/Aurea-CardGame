@@ -5,6 +5,7 @@
     flex-flow: row wrap;
     gap: 50px;
     background-color: #472f2e;
+    cursor: url("/public/images/imagens_tela/use157.cur"), auto;        
 }
 
 .ViewContent {
