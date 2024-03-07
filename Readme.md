@@ -1,4 +1,4 @@
 # Mais detalhes aqui
 
-(26/02/2024) 
-#### Atualmente estou trabalhando na responsividade da página inicial e da página de baralhos (esta está em fase pré-estrutural)
+(07/03/2024) 
+#### Atualmente estou construindo as funções de criação e exibição dos baralhos, todo o código está sobre revisão constante
