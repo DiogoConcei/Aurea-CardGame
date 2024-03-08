@@ -1,12 +1,16 @@
-const express = require('express');
+const express = require("express");
+const cors = require('cors')
+const removeBgRouter = require("./routes/removeFundo"); // Importe o roteador removeBackground
+
 const app = express();
-const routes = require('./routes');
+app.use(cors)
 
-app.use(express.json())
-app.use(routes)
+app.use(express.json());
 
-app.get('/', (req, res) => {
-  res.send('Olá, mundo!');
+app.use("/removeFundo", removeBgRouter);
+
+app.get("/", (req, res) => {
+  res.send("Olá, mundo!");
 });
 
 const PORT = process.env.PORT || 3000;

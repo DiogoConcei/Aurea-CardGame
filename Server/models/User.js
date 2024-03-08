@@ -1,8 +1,7 @@
 const conexao = require('../config/database')
 const { Sequelize, DataTypes } = require('sequelize');
-const sequelize = new Sequelize(conexao);
 
-const User = sequelize.define('User', {
+const User = conexao.define('User', {
     Nome: {
         type: DataTypes.STRING,
         allowNull: false,

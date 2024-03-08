@@ -10,13 +10,13 @@ npm-debug.log*
 **/node_modules/
 
 # Arquivos de configuração específicos do desenvolvedor
-.env.local
+.env
 .env.development.local
 .env.test.local
 .env.production.local
 
 # Outros
-.env.local
+.env
 .env.development.local
 .env.test.local
 .env.production.local

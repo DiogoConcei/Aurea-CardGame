@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home/index.js";
 import Baralho from "./Pages/Baralho/index.js";
 
+
 function App() {
   return (
     <BrowserRouter>

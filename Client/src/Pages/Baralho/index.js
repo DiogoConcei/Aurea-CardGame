@@ -13,7 +13,7 @@ import { IoCreateOutline } from "react-icons/io5";
 
 // redux
 import { useDispatch, useSelector } from "react-redux";
-import { updateActionConfigButton } from "../../store/actions";
+import { updateActionConfigButton } from "../../store/actions/index.js";
 // redux
 
 const Baralhos = () => {
